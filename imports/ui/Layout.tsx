@@ -134,7 +134,7 @@ export default function Layout() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Individuals', 'Team'].map((text, index) => (
+                    {['People', 'Team'].map((text, index) => (
                         <ListItem component={Link} to={["/people", "team"][index]} key={text} disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{
