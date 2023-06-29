@@ -1,10 +1,13 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Meteor } from 'meteor/meteor';
-import { App } from '/imports/ui/App';
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
-Meteor.startup(() => {
-  const container = document.getElementById('react-target');
-  const root = createRoot(container!);
-  root.render(<App />);
-});
+import App from "../imports/ui/App";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </React.StrictMode>
+);
